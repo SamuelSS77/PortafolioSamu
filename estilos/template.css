@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-
-
 :root{
   --dark: #1F1F1F;
   --green: #A7FF60;
   --purple: #A86EFF;
   --grey:#BFBFBF;
   --white:#FFFFFF;
-  
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,22 +18,23 @@
 
 body{
   background-color:var(--dark);
+  overflow-x: hidden; 
 }
+
+
+
 .info {
- display: flex;
+  display: flex;
   justify-content: space-around; 
   align-items: center;
   gap: 20px;                
   width: 100%;   
   height: 100%;
   box-sizing: border-box;  
-  
 }
 
-
-
 .textos {
- display: flex;
+  display: flex;
   justify-content:center;
   flex-direction: column;
   align-items:flex-start;
@@ -43,34 +42,31 @@ body{
   width:40%;
   height: 100%;
   color:var(--white);
-    
 }
+
 .textos h2{
   font-size: 40px;
 }
 
 .foto{
-  
   display: flex;
   align-items: flex-start; 
   width:40%;
   height: auto;
-  
-  
 }
 
 .foto img {
   width: 100%;   
   height: auto; 
 }
+
 .grupo-btn{
   width:100%;
   height: 100%;
   display:flex;
   justify-content: space-between;
-  
-
 }
+
 .grupo-btn button {
   font-size: 20px;   
   font-weight: semi-bold; 
@@ -81,56 +77,50 @@ body{
   border-style: solid; 
   border-width: 2px;
 }
+
 .btn-primario{
-  
   border-color: var(--purple);
   color: var(--grey);
-  
 }
+
 .btn-secundario{
-  
   border-color: var(--green);
   color: var(--grey);
-  
 }
 
 .grupo-btn button:hover{
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
+
 .btn-primario:hover{
-  
   border-color: var(--green);
   color: var(--purple);
 }
+
 .btn-secundario:hover{
-  
   border-color: var(--purple);
   color: var(--green);
-  
 }
- .foto:hover{
-    
-     transform: scale(1.04);
-  transition: all 0.5s ease;
-  }
 
-/* Segunda Pagina */
+.foto:hover{
+  transform: scale(1.04);
+  transition: all 0.5s ease;
+}
+
 
 .segundap{
-  
   display: flex;
   justify-content: space-around; 
   align-items: flex-start;
- margin-top: 160px;             
+  margin-top: 160px;             
   width: 100%;   
   height: 100%;
   box-sizing: border-box;
 }
 
 .proceso{
-  
-   display: flex;
+  display: flex;
   justify-content:center;
   flex-direction: column;
   align-items:flex-start;
@@ -140,27 +130,25 @@ body{
   color:var(--white);
 }
 
-
 .proceso h2 {
   color:var(--purple);
-   font-size: 40px;
+  font-size: 40px;
 }
+
 .foto2{
-   display: flex;
+  display: flex;
   align-items:center; 
   width:30%;
   height: auto;
-  
-  
 }
 
 .foto2 img {
   width: 100%;
   height: auto;
 }
+
 .solucion{
-  
-   display: flex;
+  display: flex;
   justify-content:center;
   flex-direction: column;
   align-items:flex-start;
@@ -168,26 +156,20 @@ body{
   width:30%;
   height: 100%;
   color:var(--white);
-  
 }
+
 .solucion h2 {
-  
-   font-size: 40px;
+  font-size: 40px;
   color:var(--green);
 }
-  
-  .foto2:hover{
-    
-     transform: scale(1.08);
+
+.foto2:hover{
+  transform: scale(1.08);
   transition: all 0.5s ease;
-  }
+}
 
-
-/* Tercera Pagina */
 
 .tercerap{
-  
-  
   display: flex;
   justify-content: space-around; 
   align-items: center;
@@ -199,19 +181,19 @@ body{
 }
 
 .foto3{
-  
-   display: flex;
+  display: flex;
   align-items: flex-start; 
   width:40%;
   height: auto;
 }
+
 .foto3 img {
-  
   width:100%;
   height:auto;
 }
+
 .text-final {
- display: flex;
+  display: flex;
   justify-content:center;
   flex-direction: column;
   align-items:center;
@@ -219,7 +201,6 @@ body{
   width:40%;
   height: 100%;
   color:var(--white);
-  
 }
 
 .text-final h2 {
@@ -227,9 +208,45 @@ body{
   color:var(--green);
 }
 
-
 .foto3 img:hover {
-  
-    transform: scale(1.08);
+  transform: scale(1.08);
   transition: all 0.5s ease;
+}
+
+
+@media (max-width: 768px) {
+
+  .info, .segundap, .tercerap {
+    flex-direction: column;
+    height: auto;
+    margin-top: 60px;
+    padding: 20px;
+    gap: 40px;
+  }
+
+ 
+  .textos, .foto, .proceso, .foto2, .solucion, .foto3, .text-final {
+    width: 95%;
+    align-items: center; 
+    text-align: center;
+  }
+
+  .textos h2, .proceso h2, .solucion h2, .text-final h2 {
+    font-size: 32px;
+  }
+
+ 
+  .grupo-btn {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .grupo-btn button {
+    width: 100%;
+  }
+
+  .foto:hover, .foto2:hover, .foto3:hover {
+    position: relative;
+    z-index: 10;
+  }
 }
