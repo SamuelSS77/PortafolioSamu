@@ -25,6 +25,7 @@ body {
   overflow-x: hidden;
 }
 
+/* --- HEADER --- */
 header {
   display: flex;
   justify-content: space-between;
@@ -108,6 +109,7 @@ header {
 .hero .btn-primario:hover { border-color: var(--purple); color: var(--green); transform: scale(1.05); }
 .hero .btn-secundario:hover { border-color: var(--green); color: var(--purple); transform: scale(1.05); }
 
+
 .about-me {
   background-color: var(--dark);
   padding: 80px 10%;
@@ -121,13 +123,63 @@ header {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
+.estadistica { transition: 0.3s; }
 .estadistica span { display: block; font-size: 80px; font-weight: bold; color: var(--green); transition: 0.3s;}
-.estadistica p { font-size: 24px; color: var(--purple); }
+.estadistica p { font-size: 24px; color: var(--purple); text-transform: uppercase; }
 .estadistica:hover { transform: scale(1.05); cursor: pointer; }
 .estadistica:hover span { color: var(--purple); }
 .estadistica:hover p { color: var(--green); }
+
+
+.skills-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 80px auto 0;
+  text-align: left; 
+}
+
+.skills-titulo {
+  color: var(--white);
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.skill-item {
+  margin-bottom: 30px;
+}
+
+.skill-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skill-nombre, .skill-porcentaje {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.barra-fondo {
+  background-color: #333;
+  width: 100%;
+  height: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.barra-progreso {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.color-morado { background-color: var(--purple); box-shadow: 0 0 10px var(--purple); }
+.color-verde { background-color: var(--green); box-shadow: 0 0 10px var(--green); }
 
 
 .info, .segundap, .tercerap {
@@ -165,6 +217,7 @@ header {
 .grupo-btn .btn-primario:hover { border-color: var(--green); color: var(--purple); }
 .grupo-btn .btn-secundario:hover { border-color: var(--purple); color: var(--green); }
 
+
 @media (max-width: 800px) {
   header { flex-direction: column; padding: 20px; }
   .hero-container, .contenedor-datos, .info, .segundap, .tercerap {
@@ -176,4 +229,6 @@ header {
   }
   .hero-buttons, .grupo-btn { flex-direction: column; align-items: center; }
   .hero .btn-primario, .hero .btn-secundario, .grupo-btn button { width: 100%; max-width: 300px; }
+  
+  .estadistica span { font-size: 60px; }
 }
